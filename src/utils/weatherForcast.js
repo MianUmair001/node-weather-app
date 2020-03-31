@@ -7,7 +7,8 @@ const weatherForcast=(latitude,longitude,callback)=>{
         }else{
             callback(undefined,
                 response.data.daily.data[0].summary + 'It is currently '+
-                response.data.currently.temperature + ' degress out.The High today is '+response.data.daily.data[0].temperatureHigh +' with the low of '+ response.data.daily.data[0].temperatureLow +'. There is a '+
+                response.data.currently.temperature + ' degress out.The High today is '+response.data.daily.data[0].temperatureHigh +
+                ' with the low of '+ response.data.daily.data[0].temperatureLow +'. There is a '+
                 response.data.currently.precipProbability +'% chance of rain')  
         }
     }).catch(error=>{
