@@ -2,6 +2,9 @@
   "name": "web-servsers",
   "version": "1.0.0",
   "main": "app.js",
+  "engines":{
+    "node":"8.10.0"
+  },
   "scripts": {
     "start": "node src/app.js"
   },
