@@ -9,7 +9,8 @@ weatherForm.addEventListener('submit',(e)=>{
     const location =search.value;
     messageOne.textContent='Loading ...'
     messageTwo.textContent=''
-    fetch('/weather?address='+location).then((response)=>{
+    const fetchpromise=fetch('/weather?address='+location)
+    fetchpromise.then((response)=>{
         response.json().then((data={})=>{
             if(data.error){
                 messageOne.textContent=data.error
@@ -19,9 +20,6 @@ weatherForm.addEventListener('submit',(e)=>{
             }
         })
     })
-
-
-
 })
 
 

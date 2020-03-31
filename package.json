@@ -1,10 +1,9 @@
 {
   "name": "web-servsers",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-      "start": "node src/app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +13,15 @@
     "hbs": "^4.1.0",
     "node-fetch": "^2.6.0",
     "request-promise": "^4.2.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MianUmair001/node-weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MianUmair001/node-weather-app/issues"
+  },
+  "homepage": "https://github.com/MianUmair001/node-weather-app#readme",
+  "description": ""
 }
