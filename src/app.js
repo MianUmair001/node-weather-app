@@ -4,7 +4,6 @@ const weatherForcast=require('./utils/weatherForcast')
 const hbs =require('hbs');
 const express=require('express')
 const publicDirectoryPath=path.join(__dirname,'../public')
-console.log(publicDirectoryPath)
 const pathViews=path.join(__dirname,'../templates/views')
 const partialsPath=path.join(__dirname,'../templates/partials')
 const app=express()
@@ -13,6 +12,7 @@ app.use(express.static(publicDirectoryPath))
 app.set("view engine",'hbs')
 app.set('views',pathViews)
 hbs.registerPartials(partialsPath)
+
 app.get('',(req,res)=>{
     res.render('index',{
         title:'Weather',
@@ -84,14 +84,7 @@ app.get('*',(req,res)=>{
 })
 
 
-// app.get('/help/*',(req,res)=>{
-//     res.send("Help article not found")
-// })
 
-
-// app.get('*',(req,res)=>{
-//     res.send("My 404 Page")
-// })
 
 
 app.listen(port,()=>{
