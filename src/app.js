@@ -8,7 +8,7 @@ console.log(publicDirectoryPath)
 const pathViews=path.join(__dirname,'../templates/views')
 const partialsPath=path.join(__dirname,'../templates/partials')
 const app=express()
-
+const port=process.env.PORT||3000
 app.use(express.static(publicDirectoryPath))
 app.set("view engine",'hbs')
 app.set('views',pathViews)
@@ -94,8 +94,8 @@ app.get('*',(req,res)=>{
 // })
 
 
-app.listen(3000,()=>{
-    console.log("Server is running on port:3000")
+app.listen(port,()=>{
+    console.log("Server is running on port:"+port)
 })
 
 

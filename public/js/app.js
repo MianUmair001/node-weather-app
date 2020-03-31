@@ -1,5 +1,4 @@
 console.log("This is the text message to check the js ");
-// const fetch =require('node-fetch')
 
 
 
@@ -16,7 +15,7 @@ weatherForm.addEventListener('submit',(e)=>{
     const location =search.value;
     messageOne.textContent='Loading ...'
     messageTwo.textContent=''
-    fetch('http://localhost:3000/weather?address='+location+'').then((response)=>{
+    fetch('/weather?address='+location+'').then((response)=>{
         response.json().then((data={})=>{
             if(data.error){
                 messageOne.textContent=data.error
