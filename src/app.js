@@ -1,5 +1,4 @@
 const path=require('path');
-const request_promice=require('request-promise')
 const geocode=require('./utils/geocode')
 const weatherForcast=require('./utils/weatherForcast')
 const hbs =require('hbs');
